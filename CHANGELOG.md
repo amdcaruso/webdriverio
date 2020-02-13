@@ -3368,14 +3368,14 @@ This version comes with a variety of technical changes that might affect the fun
   ```js
   // v4
   browser.addCommand('myCommand', () => { ... })
-  const elem = $('myElem')
+  const elem = browser.element('myElem');
   console.log(typeof browser.myCommand) // outputs "function"
   console.log(typeof elem.myCommand) // outputs "function"
   ```
   ```js
   // v5
   browser.addCommand('myCommand', () => { ... })
-  const elem = $('myElem')
+  const elem = ('myElem')
   console.log(typeof browser.myCommand) // outputs "function"
   console.log(typeof elem.myCommand) // outputs "undefined"
   elem.addCommand('myElemCommand', () => { ... })
